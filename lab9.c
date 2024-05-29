@@ -176,6 +176,7 @@ void ex5()
     lista = init();
     lista = stergere(lista);
     afisare(lista);
+    eliberare(lista);
 }
 void ex6()
 {
@@ -185,6 +186,7 @@ void ex6()
     for(aux = lista; aux->next != NULL; aux = aux->next);
     aux->next = lista;
     afisare(lista);
+    eliberare(lista);
 }
 int palindrom(int n)
 {
@@ -211,6 +213,7 @@ void ex7()
         nr = nr * 10 + x;
     }
     printf("%d", palindrom(nr));
+    eliberare(lista);
 }
 void ex8()
 {
@@ -220,6 +223,7 @@ void ex8()
     lista = adauga_la_sfarsit(lista->info, lista);
     lista = lista->next;
     afisare(lista);
+    eliberare(lista);
 }
 nod *init1()
 {
@@ -259,6 +263,7 @@ void ex9()
     lista = init1();
     lista = stergere9(lista);
     afisare(lista);
+    eliberare(lista);
 }
 void ex10()
 {
@@ -274,6 +279,9 @@ void ex10()
     }
     afisare(lista_impare);
     afisare(lista_pare);
+    eliberare(lista);
+    eliberare(lista_pare);
+    eliberare(lista_impare);
 }
 int main()
 {
