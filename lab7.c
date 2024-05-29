@@ -204,6 +204,7 @@ int *stergere(int x, nod *lista)
         if(info == x)
         {
             pre -> next = p -> next;
+            free(p)
             break;
         }
     }
